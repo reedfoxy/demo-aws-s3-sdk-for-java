@@ -2,11 +2,34 @@
 
 사용 방법은 https://velog.io/@reedfoxy/AWS-S3-SDK-2.0-for-Java 링크 참고
 
+
+## 아마존 SDK 환경 설정 
+
+아래의 경로에 해당 파일 내용을 입력 한다. 없다면 새로 생성 한다. 읽기 권한에 주의 한다.
+
+- <code> ~/.aws/credentials </code> on Linux, macOS, or Unix
+
+- <code> C:\Users\USERNAME\.aws\credentials </code> on Windows
+
+```
+[default]
+aws_access_key_id = 
+aws_secret_access_key = 
+```
+
+참고
+
+https://docs.aws.amazon.com/sdk-for-java/v2/developer-guide/setup-credentials.html
+
+## 의존성
+
 build.gradle
 ```
 dependencies {
     implementation 'software.amazon.awssdk:s3:2.13.0'
 ```
+
+## 샘플 코드
 
 AmazonS3Service.java
 
