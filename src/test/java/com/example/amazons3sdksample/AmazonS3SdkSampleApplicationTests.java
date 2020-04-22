@@ -14,6 +14,9 @@ class AmazonS3SdkSampleApplicationTests {
     @Autowired
     ResourceLoader resourceLoader;
 
+    /**
+     * 파일을 업로드 합니다.
+     */
     @Test
     void fileUpload() throws IOException {
 
@@ -31,8 +34,11 @@ class AmazonS3SdkSampleApplicationTests {
         }
     }
 
+    /**
+     * 파일을 삭제 합니다.
+     */
     @Test
-    void fileDownload() {
+    void fileDelete() {
 
         Resource resource = resourceLoader.getResource("classpath:static/test.jpg"); // test.jpg 이미지 가져옴
 
